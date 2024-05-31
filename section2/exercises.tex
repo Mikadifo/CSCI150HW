@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[margin=1cm, paperheight=40in]{geometry}
+\usepackage[margin=1cm, paperheight=60in]{geometry}
 \usepackage{amsfonts, multicol, pgfplots, tikz}
 
 \pgfplotsset{compat=1.18}
@@ -118,6 +118,7 @@
 		    \end{axis}
 		\end{tikzpicture}
 	\end{itemize}
+\end{itemize}
 \section*{Exercises for Section 2.3}
     \begin{itemize}
 	\item [A] List all the subsets of the following sets.
@@ -173,5 +174,38 @@
 		\item [20] $|{X \subseteq P(A): |X| \le 1}| = 1+2^m$
 	    \end{itemize}
 \end{itemize}
-\end{itemize}
+\section*{Exercises for Section 2.5}
+\begin{enumerate}
+    \item Suppose $A = \{4,3,6,7,1,9\}, B=\{5,6,8,4\}, C=\{5,8,4\}$. Find:
+	\begin{multicols}{2}
+	\begin{itemize}
+	    \item $A\cup B = \{4,3,5,6,7,1,9,8\}$
+	    \item $A\cap B = \{4,6\}$
+	    \item $A- B = \{3,7,1,9\}$
+	    \item $A- C = \{3,6,7,1,9\}$
+	    \item $B- A = \{5,8\}$
+	    \item $A\cap C = \{4\}$
+	    \item $B\cap C = \{5,4,8\}$
+	    \item $B\cup C = \{5,4,8,6\}$
+	    \item $C- B = \{\}$
+	\end{itemize}
+	\end{multicols}
+    \item[3] Suppose $A = \{0,1\}, B=\{1,2\}$. Find:
+	%AxB={(0,1), (0,2), (1,1), (1,2)}
+	\begin{itemize}
+	    \item $(A\times B)\cap(B\times B)=\{(1,1), (1,2)\}$
+	    \item $(A\times B)\cup(B\times B)=\{(0,1), (0,2), (1,1), (1,2), (2,1), (2,2)\}$
+	    \item $(A\times B)-(B\times B)=\{(0,1), (0,2)\}$
+	    \item $(A\cap B)\times A=\{(1,0), (1,1)\}$
+	    \item $(A\times B)\cap B=\{\}$
+	    \item $P(A)\cap P(B)=\{\phi, \{1\}\}$
+	    \item $P(A)- P(B)=\{\{0\}, \{0,1\}\}$
+	    \item $P(A\cap B)=\{\phi, \{1\}\}$
+	    \item $P(A\times B)=\{\phi, \{ (0,1)\}, \{(0,2)\}, \{(1,1)\}\,,\{(1,2)\},$\\
+		$\{(0,1), (0,2)\}, \{(0,1), (1,1)\}, \{(0,1), (1.2)\},$\\
+		$\{(0,2), (1,1)\}, \{(0,2), (1,2)\}, \{(1,1), (1,2)\}$\\
+		$\{(0,1), (0,2), (1,1)\}, \{(0,1), (0,2), (1,2)\}, \{(0,1), (1,1), (1,2)\}, \{(0,2), (1,1), (1,2)\}$\\
+		$\{(0,1), (0,2), (1,1), (1,2)\}\}$
+	\end{itemize}
+\end{enumerate}
 \end{document}
