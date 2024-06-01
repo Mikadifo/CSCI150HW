@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[margin=1cm, paperheight=60in]{geometry}
+\usepackage[margin=1cm, paperheight=100in]{geometry}
 \usepackage{amsfonts, multicol, pgfplots, tikz}
 
 \pgfplotsset{compat=1.18}
@@ -222,5 +222,127 @@
 	    \item $A ^{c} \cap B = \{ 5,8\}$
 	    \item ${A ^{c} \cap B}^c = \{ 0,1,2,3,4,6,7,9,10\}$
 	\end{itemize}
+\end{enumerate}
+\section*{Exercises for Section 2.7}
+\begin{enumerate}
+	\item Draw a Venn diagram for $A^c$\\
+	    \begin{tikzpicture}
+		\node[draw,rectangle,minimum size=3cm,label=$U$,fill=blue!10] (U) at (0,0){};
+		\node[draw,circle,minimum size=1.5cm,fill=white] (A) at (0,0){$A$};
+	    \end{tikzpicture}
+	\item Draw a Venn diagram for $B-A$\\
+	    \begin{tikzpicture}
+		\node[draw,circle,minimum size=3cm] (A) at (0,0){$A$};
+		\node[draw,circle,minimum size=3cm,fill=blue!10] (B) at (1.8,0){$B$};
+		\begin{scope}
+		    \clip (0,0) circle(1.5cm);
+		    \clip (1.8,0) circle(1.5cm);
+		    \fill[white] (0,0) circle(1.5cm);
+		\end{scope}
+		\draw (0,0) circle(1.5cm);
+		\draw (1.8,0) circle(1.5cm);
+	    \end{tikzpicture}
+	\item Draw a Venn diagram for $(A-B)\cap C$\\
+	    \begin{tikzpicture}
+		\node[draw,circle,minimum size=3cm] (A) at (0,0){$A$};
+		\node[draw,circle,minimum size=3cm] (B) at (1.8,0){$B$};
+		\node[draw,circle,minimum size=3cm] (C) at (0.9,1.8){$C$};
+		\begin{scope}
+		    \clip (0,0) circle(1.5cm);
+		    \clip (0.9,1.8) circle(1.5cm);
+		    \fill[blue!10] (0,0) circle(1.5cm);
+		    \fill[white!10] (1.8,0) circle(1.5cm);
+		\end{scope}
+		\draw (0,0) circle(1.5cm);
+		\draw (1.8,0) circle(1.5cm);
+		\draw (0.9,1.8) circle(1.5cm);
+	    \end{tikzpicture}
+	\item Draw a Venn diagram for $(A\cup B)- C$\\
+	    \begin{tikzpicture}
+		\node[draw,circle,minimum size=3cm,fill=blue!10] (A) at (0,0){$A$};
+		\node[draw,circle,minimum size=3cm,fill=blue!10] (B) at (1.8,0){$B$};
+		\node[draw,circle,minimum size=3cm,fill=white] (C) at (0.9,1.8){$C$};
+		\draw (0,0) circle(1.5cm);
+		\draw (1.8,0) circle(1.5cm);
+		\draw (0.9,1.8) circle(1.5cm);
+	    \end{tikzpicture}
+	\item Draw a Venn diagram for $A\cup(B\cap C)$ and $(A\cup B)\cap(A\cup C)$.\\
+	    \begin{tikzpicture}
+		\node[draw,circle,minimum size=3cm,fill=blue!10] (A) at (0,0){$A$};
+		\node[draw,circle,minimum size=3cm] (B) at (1.8,0){$B$};
+		\node[draw,circle,minimum size=3cm] (C) at (0.9,1.8){$C$};
+		\begin{scope}
+		    \clip (1.8,0) circle(1.5cm);
+		    \fill[blue!10] (0.9,1.8) circle(1.5cm);
+		\end{scope}
+		\draw (0,0) circle(1.5cm);
+		\draw (1.8,0) circle(1.5cm);
+		\draw (0.9,1.8) circle(1.5cm);
+	    \end{tikzpicture}
+	    \\\textbf{They are the same.}
+	\item Draw a Venn diagram for $A\cap(B\cup C)$ and $(A\cap B)\cup(A\cap C)$.\\
+	    \begin{tikzpicture}
+		\node[draw,circle,minimum size=3cm] (A) at (0,0){$A$};
+		\node[draw,circle,minimum size=3cm] (B) at (1.8,0){$B$};
+		\node[draw,circle,minimum size=3cm] (C) at (0.9,1.8){$C$};
+		\begin{scope}
+		    \clip (0,0) circle(1.5cm);
+		    \fill[blue!10] (1.8,0) circle(1.5cm);
+		\end{scope}
+		\begin{scope}
+		    \clip (0.9,1.8) circle(1.5cm);
+		    \fill[blue!10] (0,0) circle(1.5cm);
+		\end{scope}
+		\draw (0,0) circle(1.5cm);
+		\draw (1.8,0) circle(1.5cm);
+		\draw (0.9,1.8) circle(1.5cm);
+	    \end{tikzpicture}
+	    \\\textbf{They are the same.}
+	\item Suppose sets A and B are in a universal set U. Draw Venn diagrams for ${A\cap B}^c$ and $A^c \cup B^c$.\\
+	    \begin{tikzpicture}
+		\node[draw,rectangle,minimum width=6cm, minimum height=4cm, fill=blue!10, label={$U$}] (A) at (0,0){$A$};
+		\node[draw,circle,minimum size=3cm, fill=blue!10] (A) at (-0.9,0){$A$};
+		\node[draw,circle,minimum size=3cm, fill=blue!10] (B) at (0.9,0){$B$};
+		\begin{scope}
+		    \clip (-0.9,0) circle(1.5cm);
+		    \fill[white] (0.9,0) circle(1.5cm);
+		\end{scope}
+		\draw (-0.9,0) circle(1.5cm);
+		\draw (0.9,0) circle(1.5cm);
+	    \end{tikzpicture}
+	    \\\textbf{They are the same.}
+	\item Suppose sets A and B are in a universal set U. Draw Venn diagrams for ${A\cup B}^c$ and $A^c \cap B^c$.\\
+	    \begin{tikzpicture}
+		\node[draw,rectangle,minimum width=6cm, minimum height=4cm, fill=blue!10, label={$U$}] (A) at (0,0){$A$};
+		\node[draw,circle,minimum size=3cm, fill=white] (A) at (-0.9,0){$A$};
+		\node[draw,circle,minimum size=3cm, fill=white] (B) at (0.9,0){$B$};
+		\draw (-0.9,0) circle(1.5cm);
+		\draw (0.9,0) circle(1.5cm);
+	    \end{tikzpicture}
+	    \\\textbf{They are the same.}
+	\item Draw a Venn diagram for $(A\cap B) - C$.\\
+	    \begin{tikzpicture}
+		\node[draw,circle,minimum size=3cm] (A) at (0,0){$A$};
+		\node[draw,circle,minimum size=3cm] (B) at (1.8,0){$B$};
+		\node[draw,circle,minimum size=3cm] (C) at (0.9,1.8){$C$};
+		\begin{scope}
+		    \clip (1.8,0) circle(1.5cm);
+		    \clip (0,0) circle(1.5cm);
+		    \fill[blue!10] (0,0) circle(1.5cm);
+		    \fill[white!10] (0.9,1.8) circle(1.5cm);
+		\end{scope}
+		\draw (0,0) circle(1.5cm);
+		\draw (1.8,0) circle(1.5cm);
+		\draw (0.9,1.8) circle(1.5cm);
+	    \end{tikzpicture}
+	\item Draw a Venn diagram for $(A- B) \cup C$.\\
+	    \begin{tikzpicture}
+		\node[draw,circle,minimum size=3cm,fill=blue!10] (A) at (0,0){$A$};
+		\node[draw,circle,minimum size=3cm,fill=white] (B) at (1.8,0){$B$};
+		\node[draw,circle,minimum size=3cm,fill=blue!10] (C) at (0.9,1.8){$C$};
+		\draw (0,0) circle(1.5cm);
+		\draw (1.8,0) circle(1.5cm);
+		\draw (0.9,1.8) circle(1.5cm);
+	    \end{tikzpicture}
 \end{enumerate}
 \end{document}
