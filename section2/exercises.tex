@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[margin=1cm, paperheight=82in]{geometry}
+\usepackage[margin=1cm, paperheight=84in]{geometry}
 \usepackage{amsfonts, multicol, pgfplots, tikz}
 
 \pgfplotsset{compat=1.18}
@@ -28,7 +28,7 @@
 	\end{enumerate}
     \item[B.] Write each of the following sets in set-builder notation.
 	\begin{enumerate}
-	    \item[17] $\{2,4,8,16,32,64\ldots\} = \{2 \cdot 2^x: x \ge 0, x \in \mathbb{Z}\}$
+	    \item[17] $\{2,4,8,16,32,64\ldots\} = \{2^x: x > 0, x \in \mathbb{Z}\}$
 	    \item[19] $\{\ldots, -6, -3, 0, 3, 6, 9, 12, 15, \ldots \} = \{3x: x \in \mathbb{Z}\}$
 	    \item[24] $\{-4,-3,-2,-1,-0,1,2\} = \{x: -4 \le x \le 2, x \in \mathbb{Z}\}$
 	    \item[25] $\{\ldots, \frac{1}{8} ,\frac{1}{4} ,\frac{1}{2},1,2,4,8, \ldots\} = \{2^x:x \in \mathbb{Z}\}$
@@ -61,7 +61,7 @@
 		    \item $A \times A = $\\
 		    $\{(\pi, \pi), (\pi, e), (\pi, 0), (e, \pi), (e, e), (e, 0), (0, \pi), (0, e), (0, 0)\}$
 		    \item $B \times B = \{ (0, 0), (0, 1), (1, 0), (1, 1)\}$
-		    \item $A \times \phi = \{(\pi), (e), (0)\}$
+		    \item $A \times \phi = \{\}$
 		    \item $(A \times B) \times B = $\\
 		    $\{((\pi, 0), 0), ((\pi, 0), 1), ((\pi, 1), 0), ((\pi, 1), 1), ((e, 0), 0), ((e, 0), 1),$\\
 		    $((e, 1), 0), ((e, 1), 1), ((0, 0), 0), ((0, 0), 1), ((0, 1), 0), ((0, 1), 1)\}$
@@ -76,10 +76,10 @@
 		\end{itemize}
 	    \item [6] $\{x \in \mathbb{R} : x^2 = x\} \times \{x \in \mathbb{N} : x^2 = x\} = \{(0, 1), (1, 1)\}$
 	    \item [8] $\{0, 1 \}^4 =$\\
-	    $\{(((0, 0), 0), 0), (((0,0), 0), 1), (((0, 0), 1), 0), (((0,0), 1), 1), (((0, 1), 0),0),$\\
-	    $(((0,1), 0), 1), (((0, 1), 1), 0), (((0,1),1),1), (((1, 0), 0), 0), (((1,0), 0), 1),$\\
-	    $(((1, 0), 1),0), (((1,0), 1), 1), (((1, 1), 0), 0), (((1,1), 0), 1),$\\
-	    $(((1, 1), 1), 0), (((1,1),1),1)\}$
+	    $\{(0, 0, 0, 0), (0,0, 0, 1), (0, 0, 1, 0), (0,0, 1, 1), (0, 1, 0,0),$\\
+	    $(0,1, 0, 1), (0, 1, 1, 0), (0,1,1,1), (1, 0, 0, 0), (1,0, 0, 1),$\\
+	    $(1, 0, 1,0), (1,0, 1, 1), (1, 1, 0, 0), (1,1, 0, 1),$\\
+	    $(1, 1, 1, 0), (1,1,1,1)\}$
 	\end{itemize}
     \item [B] Sketch these Cartesian products on the $x-y$ plane $\mathbb{R}^2$ (or $\mathbb{R}^3$for the last two.)
 	\begin{itemize}
@@ -128,22 +128,22 @@
 		\item $\{1,2,\phi\} = \{\}, \{1\}, \{2\}, \{\phi\}, \{1,2\}, \{1,\phi\}, \{2,\phi\}, \{1,2,\phi\}$
 		\item $\{\{\mathbb{R}\}\} = \{\}, \{\{\mathbb{R}\}\}$
 		\item $\phi = \{\}$
-		\item $\phi = \{\}, \{\phi\}$
+	    \item $\{\phi\} = \{\}, \{\phi\}$
 		\item [8.] $\{\{0,1\}, \{0,1,\{2\}\}, \{0\}\} = \{\}, \{\{0,1\}\}, \{\{0,1,\{2\}\}\}, \{\{0\}\}, \{\{0,1\}, \{0,1,\{2\}\}\,\},$\\
 		    $\{\{0,1\}, \{0\}\}, \{\{0,1,\{2\}\}, \{0\}\}, \{\{0,1\}, \{0,1,\{2\}\,\}, \{0\}\}$
 	    \end{enumerate}
 	\item [B] Write out the following sets by listing their elements between braces.
 	    \begin{itemize}
-		\item [10.] $\{ X\subseteq \mathbb{N} : |X| \le 1\} = \{\{1\}\}$
+	    \item [10.] $\{ X\subseteq \mathbb{N} : |X| \le 1\} = \{\phi,\{1\}\, \{2\}, \{3\}, \cdots, \{x\}:x\in\mathbb{N}\}$
 		\item [11.] $\{X: X\subseteq \{3,2, a\} \ \textnormal{and} \  |X| = 4\} = \{\}$
 		\item [12.] $\{X: X\subseteq \{3,2, a\} \ \textnormal{and} \  |X| = 1\} = \{\{3\}, \{2\}, \{a\}\}$
 	    \end{itemize}
 	\item [C] Decide if the following statements are true or false. Explain.
 	    \begin{itemize}
 		\item [13] $\mathbb{R}^3 \subseteq \mathbb{R}^3$. True, since it's a subset of the same set.
-		\item [14] $\mathbb{R}^2 \subseteq \mathbb{R}^3$
-		\item [15] $\{(x,y):x-1=0\} \subseteq \{(x,y):x^2-x=0\}$
-		\item [16] $\{(x,y):x^2-x=0\}\subseteq\{(x,y):x-1=0\}$
+		\item [14] $\mathbb{R}^2 \subseteq \mathbb{R}^3$. False, since $\mathbb{R}^2$ is in the form of $(x_1,x_2)$ and $\mathbb{R}^3$ is in the form of $(x_1,x_2,x_3)$.
+		\item [15] $\{(x,y):x-1=0\} \subseteq \{(x,y):x^2-x=0\}$. True, since the right set has $(1,y)$ which is the set on the left.
+		\item [16] $\{(x,y):x^2-x=0\}\subseteq\{(x,y):x-1=0\}$. False, since the left one has 2 elements and the right one has only 1.
 	    \end{itemize}
     \end{itemize}
 \section*{Exercises for Section 2.4}
@@ -168,10 +168,10 @@
 		\item [14] $|P(P(A))| = 2^{2^m}$
 		\item [15] $|P(A\times B)| = 2^{mn}$
 		\item [16] $|P(A)\times P(B)| = 2^{m+n}$
-		\item [17] $|{X \in P(A): |X| \le 1}| = m+1$
+		\item [17] $|\{X \in P(A): |X| \le 1\}| = m+1$
 		\item [18] $|P(A\times P(B))| = 2^{m\cdot 2^n}$
 		\item [19] $|P(P(P(A\times \phi)))| = 4$ 
-		\item [20] $|{X \subseteq P(A): |X| \le 1}| = 1+2^m$
+		\item [20] $|\{X \subseteq P(A): |X| \le 1\}| = 1+2^m$
 	    \end{itemize}
 \end{itemize}
 \section*{Exercises for Section 2.5}
@@ -354,7 +354,7 @@
 	\begin{multicols}{2}
 	\item $\sum_{k=2}^4k^3 = 99$
 	\item $\sum_{k=2}^6(k^2 + k) = 110$
-	\item $\sum_{j=-3}^3(j^2 + j) = 40$
+	\item $\sum_{j=-3}^3(j^2 + j) = 28$
 	\item $\sum_{i=1}^5(i^2 + 2^1) = 65$
 	\item $\prod_{j=4}^7j = 840$
 	\item $\prod_{j=2}^5(k-1) = 24$
@@ -382,16 +382,14 @@
     \item[3] For each $n\in\mathbb{N}$, let $A_n=\{0,1,2,3,\cdots , n\}$.
 	\begin{itemize}
 	    \begin{multicols}{2}
-	    \item $\cup_{i\in \mathbb{N}}A_i=\{0,1,2,3,\cdots,i\}$
+	    \item $\cup_{i\in \mathbb{N}}A_i=\{0\}\cup\mathbb{N}$
 	    \item $\cap_{i\in \mathbb{N}}A_i=\{0,1\}$
 	    \end{multicols}
 	\end{itemize}
     \item[4] For each $n\in\mathbb{N}$, let $A_n=\{-2n,0,2n\}$.
 	\begin{itemize}
-	    \begin{multicols}{2}
-	    \item $\cup_{i\in \mathbb{N}}A_i=\{0,-2,2,-4,-4,\cdots,-2i,2i\}$
+	    \item $\cup_{i\in \mathbb{N}}A_i=\{0,-2,2,-4,4\}\cup \{2n:n\in\mathbb{N}\} \cup \{-2n:n\in\mathbb{N}\}$
 	    \item $\cap_{i\in \mathbb{N}}A_i=\{0\}$
-	    \end{multicols}
 	\end{itemize}
     \item[5] 
 	\begin{itemize}
