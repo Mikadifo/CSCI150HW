@@ -263,4 +263,33 @@
     \item [H] $\forall x \in \mathbb{N}, \exists y \in \mathbb{N}, y\cdot x = y$\\
 	\textbf{False}
 \end{enumerate}
+\section*{Exercises for Section 7.3}
+\begin{enumerate}
+	\item If $f$ is a polynomial and its degree is greater than 2, then $f'$ is not constant.\\
+	    p = f is a polynomial\\
+	    q = its degree is greater than 2\\
+	    r = $f'$ is constant\\
+	    $(p \land q) \Rightarrow \neg r$
+	\item The number x is positive, but the number y is not positive.\\
+	    p = x is positive\\
+	    q = y is positive\\
+	    $p \land \neg q$
+	\item If x is prime then $\sqrt{x}$ is not a rational number.\\
+	    p = x is prime\\
+	    q = $\sqrt{x}$ is a rational number\\
+	    $p \Rightarrow \neg q$
+	\item For every prime number p there is another prime number q with $q>p$\\
+	    $\forall p \in primes, \exists q \in primes, q > p$
+	\item For every positive number $\varepsilon$, there is a positive number $\delta$ for which $|x-a| < \delta$ implies $|f(x) - f(a)| < \varepsilon$\\
+	    $\forall \varepsilon \in \mathbb{R}, \varepsilon > 0, \exists \delta \in \mathbb{R}, \delta > 0, (|x-a| < \delta) \Rightarrow (|f(x) - f(a)| < \varepsilon)$
+	\item [7] There exists a real number a for which $a+x=x$ for every real number x.\\
+	    $\exists a \in \mathbb{R}, \forall x \in \mathbb{R}, a+x=x$
+	\item [8] I don't eat anything that has a face.\\
+	    p = I eat anything that has a face\\
+	    $\neg p$
+	\item [9] If x is a rational number and $x\neq 0$, then tan(x) is not a rational number.\\
+	    $((x\in \mathbb{Q}) \land (x \neq 0)) \Rightarrow \tan{x} \notin \mathbb{ Q}$
+	\item [10] If sin(x) < 0, then it is not the case that $0\le x \leq \pi$.\\
+	    $(sin(x) < 0) \Rightarrow \neg(0\le x \le \pi)$
+\end{enumerate}
 \end{document}
