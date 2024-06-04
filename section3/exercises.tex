@@ -4,7 +4,7 @@
 \usepackage{amsfonts, multicol, pgfplots, tikz}
 
 \pgfplotsset{compat=1.18}
-\title{Section 3 homework}
+\title{Logic Homework}
 \author{Michael Padilla}
 
 \begin{document} 
@@ -219,7 +219,48 @@
 	\item [13] $P \lor (Q \land R)$ and $(P \lor Q) \land R$\\
 	    $(P\lor Q) \land (P\lor R) \neq (R\land P) \lor (R \land Q)$\\
 	    They are not logically equivalent.
-% A. Prove or disprove: (P ⊕ Q) ⊕ R = P ⊕ (Q ⊕ R)
-% B. Prove or disprove: P ⊕ (Q ⇒ R) = (P ⊕ Q) ⇒ (P ⊕ R)\
+	\item [A] Prove or disprove: $(P \oplus Q) \oplus R$ and $P \oplus (Q \oplus R)$\\
+	    Using the associative laws, we can see they're logically equivalent.
+	\item [B] Prove or disprove: $(P \oplus Q) \Rightarrow (P \oplus R)$ and $P \oplus (Q \Rightarrow R)$\\
+	    Using contrapositive laws, we can see they're logically equivalent.
+\end{enumerate}
+\section*{Exercises for Section 7.1}
+\begin{enumerate}
+    \item $\forall x \in \mathbb{R}, x^2 > 0$\\
+	For every Real number x, $x^2$ is positive. \textbf{False}
+    \item $\forall x \in \mathbb{R}, \exists n \in \mathbb{N}, x^n \ge 0$\\
+	For every Real number x, there's at least one Natural number n, that $x^n$ is zero or positive. \textbf{False}
+    \item $\exists a \in \mathbb{R}, \forall x \in \mathbb{R}, ax=x$\\
+	There's at least one Real number a, that $ax=x$ for any Real number x. \textbf{True}
+    \item $\forall X \in P(\mathbb{N}), X \subseteq \mathbb{R}$ \\
+	For every set X in $P(\mathbb{N})$, X is a subset of Real numbers. \textbf{True}
+    \item $\forall n \in \mathbb{N}, \exists X \in P(\mathbb{N}), |X| < n$\\
+	For every Natural number n, there's at least one subset X of $\mathbb{N}$, that it's cardinatily is less than n. \textbf{True}
+    \item $\exists n \in \mathbb{N}, \forall X \in P(\mathbb{N}), |X| < n$\\
+    There's at least one Natural number n, that $|x| < n$ for every subset X of $\mathbb{N}$. \textbf{False}
+    \item $\forall X \subseteq \mathbb{N}, \exists n \in \mathbb{Z}, |X| = n$\\
+	For every subset X of the Natural numbers, there's at least one integer n, that $|x| = n$. \textbf{False}
+    \item $\forall n \in \mathbb{Z}, \exists X \subseteq \mathbb{N}, |X| = n$\\
+	For every integer n, there's at least one subset X of the Natural numbers, that the cardinatily of X is equal to n. \textbf{True}
+    \item $\forall n \in \mathbb{Z}, \exists m \in \mathbb{Z}, m = n + 5$\\
+	For every integer n, there's at least one integer m, that $m=n+5$. \textbf{True}
+    \item $\exists m \in \mathbb{Z}, \forall n \in \mathbb{Z}, m = n+5$\\
+	There's at least one integer m, that $m=n+5$ for every integer n. \textbf{True}
+    \item [A] $\exists x \in \mathbb{Z}, \forall y \in \mathbb{Z}, y -x=y$\\
+	\textbf{True}
+    \item [B] $\forall x \in \mathbb{Z}, \exists y \in \mathbb{Z}, y -x=y$\\
+	\textbf{False}
+    \item [C] $\exists x \in \mathbb{N}, \forall y \in \mathbb{N}, y-x=y$\\
+	\textbf{False}
+    \item [D] $\forall x \in \mathbb{N}, \exists y \in \mathbb{N}, y-x=y$\\
+	\textbf{False}
+    \item [E] $\exists x \in \mathbb{Z}, \forall y \in \mathbb{Z}, y\cdot x = y$\\
+	\textbf{True}
+    \item [F] $\forall x \in \mathbb{Z}, \exists y \in \mathbb{Z}, y \cdot x =y$\\
+	\textbf{True}
+    \item [G] $\exists x \in \mathbb{N}, \forall y \in \mathbb{N}, y\cdot x = y$\\
+	\textbf{True}
+    \item [H] $\forall x \in \mathbb{N}, \exists y \in \mathbb{N}, y\cdot x = y$\\
+	\textbf{False}
 \end{enumerate}
 \end{document}
