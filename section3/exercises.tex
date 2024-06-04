@@ -277,7 +277,7 @@
 	\item If x is prime then $\sqrt{x}$ is not a rational number.\\
 	    p = x is prime\\
 	    q = $\sqrt{x}$ is a rational number\\
-	    $p \Rightarrow \neg q$
+	    $p \Rightarrow \neg q\le p$
 	\item For every prime number p there is another prime number q with $q>p$\\
 	    $\forall p \in primes, \exists q \in primes, q > p$
 	\item For every positive number $\varepsilon$, there is a positive number $\delta$ for which $|x-a| < \delta$ implies $|f(x) - f(a)| < \varepsilon$\\
@@ -291,5 +291,36 @@
 	    $((x\in \mathbb{Q}) \land (x \neq 0)) \Rightarrow \tan{x} \notin \mathbb{ Q}$
 	\item [10] If sin(x) < 0, then it is not the case that $0\le x \leq \pi$.\\
 	    $(sin(x) < 0) \Rightarrow \neg(0\le x \le \pi)$
+\end{enumerate}
+\section*{Exercises for Section 7.4}
+\begin{enumerate}
+	\item The number x is positive, but the number y is not positive.\\
+	    The number x is not positive, or the number y is positive.
+	\item If x is prime, then $\sqrt{x}$ is not a rational number.\\
+	    x is prime and $\sqrt{x}$ is a rational number
+	\item For every prime number p, there is another prime number q with $q>p$.\\
+	    There is at least one prime number p that $q\le p$ for every prime number q.
+	\item For every positive number $\varepsilon$, there is a positive number $\delta$ such that $|x-a| < \delta$ implies $|f(x) - f(a)| < \varepsilon$\\
+	    There is at least one positive number $\varepsilon$, that $(x-a \ge d) \lor |f(x) - f(a) < \varepsilon|$ for every positive number $\delta$
+	\item  [6] There exists a real number a for which $a+x=x$ for every real number x.\\
+	    For every real number a, there is another real number x such that $a+x\ne x$
+	\item  [7] I don't eat anything that has a face.\\
+	    I will eat some things that has a face.
+	\item  [8] If x is a rational number and $x \ne 0$, then tan(x) is not a rational number.\\
+	    X is a rational number and $x\ne 0$ and tan(x) is a rational number.
+	\item  [9] If sin(x) $<$ 0, then it is not the case that $0 \le x \le \pi$.\\
+	    sin(x) $\ge$ 0 and $0 \le x \le \pi$
+	\item  [10] If f is a polynomial and its degree is greater than 2, then $f'$ is not constant.\\
+	    F is a polynomial and its degree is greater than 2 and $f'$ is constant.
+	    %(p A q) -> ~r
+	    %(p A q) A r
+	    % x in Q and x not 0 -> tan(x) not in Q
+	    % (p A ~q) -> ~r
+	    % neg above = (p A ~q) A r
+	    %x-a < d -> |fx - fa| < e
+	    %x-a >= d or |fx -fa | < e
+	    %~(p -> q) = ~p V q
+	    %~(p -> ~q) = p A q
+	    %(p -> ~q) =~p V ~q
 \end{enumerate}
 \end{document}
