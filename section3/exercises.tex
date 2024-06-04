@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[margin=1cm, paperheight=44in]{geometry}
+\usepackage[margin=1cm, paperheight=88in]{geometry}
 \usepackage{amsfonts, multicol, pgfplots, tikz}
 
 \pgfplotsset{compat=1.18}
@@ -107,5 +107,119 @@
 	    $5a\in \mathbb{Q}$ if and only if $a\in \mathbb{Q}$, and $a\in\mathbb{ Q}$ if and only if $5a\in\mathbb{ Q}$
 	\item For an occurrence to become an adventure, it is necessary and sufficient for one to recount it.\\
 	    An occurrence becomes an adventure if and only if one can recount it.
+\end{enumerate}
+\section*{Exercises for Section 3.5}
+\begin{enumerate}
+	\item $P\lor (Q \Rightarrow R)$\\
+	    \begin{tabular}{l|l|c|c|c}
+		\hline
+		P & Q & R & $(Q \Rightarrow R)$ & $P\lor (Q \Leftrightarrow R)$ \\
+		\hline
+		T & T & T & T & T \\
+		T & T & F & F & T \\
+		T & F & T & T & T \\
+		T & F & F & T & T \\
+		F & T & T & T & T \\
+		F & T & F & F & F \\
+		F & F & T & T & T \\
+		F & F & F & T & T \\
+		\hline
+	    \end{tabular}
+	\item $(Q \lor R) \Leftrightarrow (R \land Q)$\\
+	    \begin{tabular}{l|l|c|c|c|c}
+		\hline
+		P & Q & R & $(Q \lor R)$ & $(R \land Q)$ & $(Q \lor R) \Leftrightarrow (R \land Q)$\\
+		\hline
+		T & T & T & T       & T       & T \\
+		T & T & F & T       & F       & F \\
+		T & F & T & T       & F       & F \\
+		T & F & F & F       & F       & T \\
+		F & T & T & T       & T       & T \\
+		F & T & F & T       & F       & F \\
+		F & F & T & T       & F       & F \\
+		F & F & F & F       & F       & T \\
+		\hline
+	    \end{tabular}
+	\item[7] $(P \land \neg P) \Rightarrow Q$\\
+	    \begin{tabular}{l|l|c|c|c}
+		\hline
+		P & Q & $(\neg P)$ & $(P \land \neg P)$ & $(P \neg P) \Rightarrow Q$\\
+		\hline
+		T & T & F     & F         & T \\
+		T & F & F     & F         & T \\
+		F & T & T     & F         & T \\
+		F & F & T     & F         & T \\
+		\hline
+	    \end{tabular}
+	\item [10] Suppose the statement $((P\land Q) \lor R)\Rightarrow (R \lor S)$ is false. Find the truth values of $P,Q,R,S$\\
+	    R = false, S = false, P = true, Q = true
+	\item [11] Suppose P is false and that the statement $(R\Rightarrow S) \Leftrightarrow (P \land Q)$ is true. Find the truth values of R and S.\\
+	    R = true, S = false
+\end{enumerate}
+\section*{Exercises for Section 3.6}
+\begin{enumerate}
+    \item [1] $P \land (Q \lor R) \equiv (P\land Q) \lor (P\land R)$\\
+	    \begin{tabular}{l|l|l|c|c|c|c|c}
+		\hline
+		P & Q & R & $(Q \lor R)$ & $(P \land  Q)$ & $(P \land R)$ & $P \land (Q \lor R)$ & $(P\land Q) \lor (P\land R)$\\
+		\hline
+		T & T & T & T       & T    & T    & T & T \\
+		T & T & F & T       & T    & F    & T & T \\
+		T & F & T & T       & F    & T    & T & T \\
+		T & F & F & F       & F    & F    & F & F \\
+		F & T & T & T       & F    & F    & F & F \\
+		F & T & F & T       & F    & F    & F & F \\
+		F & F & T & T       & F    & F    & F & F \\
+		F & F & F & F       & F    & F    & F & F \\
+		\hline
+	    \end{tabular}
+    \item [3] $P\Rightarrow Q \equiv (\neg P) \lor Q$\\
+	    \begin{tabular}{l|l|c|c|c}
+		\hline
+		P & Q & $(\neg P)$ & $(\neg P \lor Q)$ & $(P\Rightarrow Q)$\\
+		\hline
+		T & T & F     & T         & T \\
+		T & F & F     & F         & F \\
+		F & T & T     & T         & T \\
+		F & F & T     & T         & T \\
+		\hline
+	    \end{tabular}
+    \item [5] $\neg (P \lor Q \lor R) \equiv \neg P \land \neg Q \land \neg R$\\
+	    \begin{tabular}{l|l|l|c|c|c|c|c}
+		\hline
+		P & Q & R & $(\neg P)$ & $(\neg Q)$ & $(\neg R)$ & $\neg(P \lor Q \lor R)$ & $\neg P \land \neg Q \land \neg R$\\
+		\hline
+		T & T & T & F & F      & F    & F & F \\
+		T & T & F & F   & F    & T    & F & F \\
+		T & F & T & F   & T    & F    & F & F \\
+		T & F & F & F   & T    & T    & F & F \\
+		F & T & T & T   & F    & F    & F & F \\
+		F & T & F & T   & F    & T    & F & F \\
+		F & F & T & T   & T    & F    & F & F \\
+		F & F & F & T   & T    & T    & T & T \\
+		\hline
+	    \end{tabular}
+    \item [7] $P\Rightarrow Q \equiv (P \land \neg Q) \Rightarrow (Q \land \neg Q)$\\
+	    \begin{tabular}{l|l|c|c|c|c|c}
+		\hline
+		P & Q & $(\neg Q)$ & $(P \land \neg Q)$ & $(Q \land \neg Q)$ & $ (P \land \neg Q) \Rightarrow (Q \land \neg Q)$ & $P\Rightarrow Q$\\
+		\hline
+		T & T & F     & F         & F & T & T \\
+		T & F & T     & T         & F & F & F \\
+		F & T & F     & F         & F & T & T \\
+		F & F & T     & F         & F & T & T \\
+		\hline
+	    \end{tabular}
+	\item [9] $P \land Q$ and $\neg(\neg P \lor \neg Q)$\\
+	    $\equiv \neg\neg P \land \neg \neg Q$\\
+	    They are logically equivalent by DeMorgan's Law.
+	\item [11] $(\neg P) \land (P \Rightarrow Q)$ and $\neg (Q \Rightarrow P)$\\
+	    $\neg P \land (\neg P \lor Q) \neq \neg P \land Q$\\
+	    They are not logically equivalent.
+	\item [13] $P \lor (Q \land R)$ and $(P \lor Q) \land R$\\
+	    $(P\lor Q) \land (P\lor R) \neq (R\land P) \lor (R \land Q)$\\
+	    They are not logically equivalent.
+% A. Prove or disprove: (P ⊕ Q) ⊕ R = P ⊕ (Q ⊕ R)
+% B. Prove or disprove: P ⊕ (Q ⇒ R) = (P ⊕ Q) ⇒ (P ⊕ R)\
 \end{enumerate}
 \end{document}
