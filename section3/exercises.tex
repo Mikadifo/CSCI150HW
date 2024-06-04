@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1cm, paperheight=44in]{geometry}
+\usepackage{amsfonts, multicol, pgfplots, tikz}
+
+\pgfplotsset{compat=1.18}
+\title{Section 3 homework}
+\author{Michael Padilla}
+
+\begin{document} 
+\maketitle
+\section*{Exercises for Section 3.1}
+\begin{enumerate}
+    \item Every real number is an even integer. \textbf{False}
+    \item Every even number is a real number. \textbf{True}
+    \item If $x$ and $y$ are real numbers and $5x=5y$, then $x=y$. \textbf{True}
+    \item Sets $\mathbb{Z}$ and $\mathbb{N}$. \textbf{Not a statement}
+    \item Sets $\mathbb{Z}$ and $\mathbb{N}$ are infinite. \textbf{True}
+    \item Some sets are finite. \textbf{True}
+    \item[8] $\mathbb{N} \notin P(\mathbb{N})$. \textbf{True}
+    \item[11] The integer $x$ is a multiple of $7$. \textbf{Not a statement}
+    \item[12] If the integer $x$ is a multiple of $7$, then it is divisible by $7$. \textbf{True}
+    \item[13] Either $x$ is a multiple of $7$, or it is not. \textbf{True}
+    \item[14] Call me Ishmael. \textbf{Not a statement}
+\end{enumerate}
+\section*{Exercises for Section 3.2}
+\begin{enumerate}
+	\item The number 8 is both even and a power of 2.\\
+	    p = The number 8 is even\\
+	    q = The number 8 is a power of 2\\
+	    $p\land q$
+	\item The matrix A is not invertible.\\
+	    p = matrix A is invertible\\
+	    $\neg p$
+	\item $x\neq y$\\
+	    p = $(x=y)$\\
+	    $\neg p$
+	\item[5] $y\ge x$\\
+	    p = $(y=x)$\\
+	    q = $(y>x)$\\
+	    $p \lor q$
+	\item[7] The number $x$ equals zero, but the number $y$ does not.\\
+	    p = The number $x$ equals zero\\
+	    q = The number $y$ equals zero\\
+	    $p \land \neg q$
+	\item[8] At least one of the numbers $x$ and $y$ equals $0$.
+	    p = The number $x$ equals zero\\
+	    q = The number $y$ equals zero\\
+	    $p \lor q$
+	\item[9] $x\in A-B$\\
+	    p = $x\in A$\\
+	    q = $x\in B$\\
+	    r = $x\in A\cap B$\\
+	    $p \land \neg q \land \neg r$
+	\item[10] $x\in A\cup B$\\
+	    p = $x\in A$\\
+	    q = $x\in B$\\
+	    $p \lor q$
+	\item[13] Human beings want to be good, but not too good, and not all the time.\\
+	    p = Human beings want to be good\\
+	    q = Human beings want to be too good\\
+	    r = Human beings want to be good all the time\\
+	    $p \land \neg q \land \neg r$
+	\item[14] A man should look for what is, and not for what he thinks should be.\\
+	    p = A man should look for what is\\
+	    q = A man should look for what he thinks should be\\
+	    $p \land \neg q$
+\end{enumerate}
+\section*{Exercises for Section 3.3}
+\begin{enumerate}
+	\item A matrix is invertible provided that its determinant is not zero.\\
+	    If a matrix determinant is not zero, then it's invertible.
+	\item For a function to be continuous, it is sufficient that it is differenciable.\\
+	    If a function is differenciable, then it's continuous.
+	\item For a function to be integrable, it is necessary that it is continuous.\\
+	    If a function is continuous, then it's integrable.
+	\item A function is rational if it is a polynomial\\
+	    If a function is a polynomial, then it's rational.
+	\item An integer is divisible by 8 only if it is divisible by 4\\
+	    If an integer is divisible by 4, then it's divisible by 8.
+	\item Whenever a surface has only one side, it is non-orientable\\
+	    If a surface is non-orientable, then it only has one side.
+	\item A series converges whenever it converges absolutely\\
+	    If a series converges absolutely, then it converges.
+	\item A geometric series with ratio r converges if $|r| < 1$\\
+	    If the ratio r of a geometric series is $|r| < 1$, then it converges.
+	\item A function is integrable provided the function is continuous\\
+	    If a function is continuous, then it's integrable.
+	\item The discriminant is negative only if the quadratic equation has no real solutions.\\
+	    If the quadratic equation has no real solutions, then the discriminant is negative.
+	\item You fail only if you stop writing. (Ray Bradbury)\\
+	    If you stop writing, then you fail.
+	\item People will generally accept facts as truth only if the facts agree with what they already believe. (Andy Rooney)\\
+	    If the facts agree with what people already believe, then they'll generally accept facts as truth.
+	\item Whenever people agree with me I feel I must be wrong. (Oscar Wilde)\\
+	    If I feel I must be wrong, then people agree with me.
+\end{enumerate}
+\section*{Exercises for Section 3.4}
+\begin{enumerate}
+	\item For matrix A to be invertible, it is necessary and sufficient that det(A)$\neq 0$.\\
+	    A matrix A is invertible if and only if det(A)$\neq 0$
+	\item If a function has a constant derivative then it is linear, and conversely.\\
+	    A function is linear, if and only if it has a constant derivative, and conversely.
+	\item If $xy=0$ then $x=0$ or $y=0$, and conversely.\\
+	    $x=0$ or $y=0$ if and only if $xy=0$.
+	\item If $a \in \mathbb{Q}$ then $5a\in\mathbb{Q}$, and if $5a\in\mathbb{Q}$ then $a\in\mathbb{Q}$.\\
+	    $5a\in \mathbb{Q}$ if and only if $a\in \mathbb{Q}$, and $a\in\mathbb{ Q}$ if and only if $5a\in\mathbb{ Q}$
+	\item For an occurrence to become an adventure, it is necessary and sufficient for one to recount it.\\
+	    An occurrence becomes an adventure if and only if one can recount it.
+\end{enumerate}
+\end{document}
