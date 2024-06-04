@@ -319,8 +319,12 @@
 	    % neg above = (p A ~q) A r
 	    %x-a < d -> |fx - fa| < e
 	    %x-a >= d or |fx -fa | < e
-	    %~(p -> q) = ~p V q
 	    %~(p -> ~q) = p A q
 	    %(p -> ~q) =~p V ~q
+	    %~(p -> q) = ~p V q
+	\item [A] Write $\neg(\exists x \in \mathbb{R}, \forall y \in \mathbb{R}, \exists z \in \mathbb{R}, z > y \Rightarrow z > x^2)$ without using the $\neg$ symbol.\\
+	    $\forall x \in \mathbb{R}, \exists y \in \mathbb{R}, \forall z \in \mathbb{R}, (z \le y \lor z > x^2)$
+	\item [B] Write $\neg(\forall x,y \in \mathbb{R}, x < y \Rightarrow \exists z \in \mathbb{R}, x < z < y)$ without using the $\neg$ symbol.\\
+	    $\exists x,y \in \mathbb{R}, x \ge y \lor \exists z \in \mathbb{R}, z \le x \land z \ge y$
 \end{enumerate}
 \end{document}
