@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[margin=1cm, paperheight=88in]{geometry}
+\usepackage[margin=1cm, paperheight=74in]{geometry}
 \usepackage{amsfonts, multicol, pgfplots, tikz}
 
 \pgfplotsset{compat=1.18}
@@ -36,22 +36,20 @@
 	    p = $(x=y)$\\
 	    $\neg p$
 	\item[5] $y\ge x$\\
-	    p = $(y=x)$\\
-	    q = $(y>x)$\\
-	    $p \lor q$
+	    p = $(y<x)$\\
+	    $\neg p$
 	\item[7] The number $x$ equals zero, but the number $y$ does not.\\
 	    p = The number $x$ equals zero\\
 	    q = The number $y$ equals zero\\
 	    $p \land \neg q$
-	\item[8] At least one of the numbers $x$ and $y$ equals $0$.
+	\item[8] At least one of the numbers $x$ and $y$ equals $0$.\\
 	    p = The number $x$ equals zero\\
 	    q = The number $y$ equals zero\\
 	    $p \lor q$
 	\item[9] $x\in A-B$\\
 	    p = $x\in A$\\
 	    q = $x\in B$\\
-	    r = $x\in A\cap B$\\
-	    $p \land \neg q \land \neg r$
+	    $p \land \neg q$
 	\item[10] $x\in A\cup B$\\
 	    p = $x\in A$\\
 	    q = $x\in B$\\
@@ -73,13 +71,13 @@
 	\item For a function to be continuous, it is sufficient that it is differenciable.\\
 	    If a function is differenciable, then it's continuous.
 	\item For a function to be integrable, it is necessary that it is continuous.\\
-	    If a function is continuous, then it's integrable.
+	    If a function is integrable, then it's continuous.
 	\item A function is rational if it is a polynomial\\
 	    If a function is a polynomial, then it's rational.
 	\item An integer is divisible by 8 only if it is divisible by 4\\
-	    If an integer is divisible by 4, then it's divisible by 8.
+	    If an integer is divisible by 8, then it's divisible by 4.
 	\item Whenever a surface has only one side, it is non-orientable\\
-	    If a surface is non-orientable, then it only has one side.
+	    If a surface has only one side, then it is non-orientable.
 	\item A series converges whenever it converges absolutely\\
 	    If a series converges absolutely, then it converges.
 	\item A geometric series with ratio r converges if $|r| < 1$\\
@@ -87,26 +85,26 @@
 	\item A function is integrable provided the function is continuous\\
 	    If a function is continuous, then it's integrable.
 	\item The discriminant is negative only if the quadratic equation has no real solutions.\\
-	    If the quadratic equation has no real solutions, then the discriminant is negative.
+	    If the discriminant of a quadratic equation is negative, then it has no real solutions.
 	\item You fail only if you stop writing. (Ray Bradbury)\\
-	    If you stop writing, then you fail.
+	    If you fail, then you stopped writing.
 	\item People will generally accept facts as truth only if the facts agree with what they already believe. (Andy Rooney)\\
-	    If the facts agree with what people already believe, then they'll generally accept facts as truth.
+	    If people will generally accept facts as truth, then the facts agree with what they already believe.
 	\item Whenever people agree with me I feel I must be wrong. (Oscar Wilde)\\
-	    If I feel I must be wrong, then people agree with me.
+	    If people agree with me, then I feel I must be wrong.
 \end{enumerate}
 \section*{Exercises for Section 3.4}
 \begin{enumerate}
 	\item For matrix A to be invertible, it is necessary and sufficient that det(A)$\neq 0$.\\
 	    A matrix A is invertible if and only if det(A)$\neq 0$
 	\item If a function has a constant derivative then it is linear, and conversely.\\
-	    A function is linear, if and only if it has a constant derivative, and conversely.
+	    A function has a constant derivative, if and only if it's linear.
 	\item If $xy=0$ then $x=0$ or $y=0$, and conversely.\\
-	    $x=0$ or $y=0$ if and only if $xy=0$.
+	    $xy=0$ if an only if $x=0$ or $y=0$
 	\item If $a \in \mathbb{Q}$ then $5a\in\mathbb{Q}$, and if $5a\in\mathbb{Q}$ then $a\in\mathbb{Q}$.\\
-	    $5a\in \mathbb{Q}$ if and only if $a\in \mathbb{Q}$, and $a\in\mathbb{ Q}$ if and only if $5a\in\mathbb{ Q}$
+	    $a\in \mathbb{Q}$ if and only if $5a\in \mathbb{Q}$
 	\item For an occurrence to become an adventure, it is necessary and sufficient for one to recount it.\\
-	    An occurrence becomes an adventure if and only if one can recount it.
+	    An occurrence becomes an adventure if and only if one recounts it.
 \end{enumerate}
 \section*{Exercises for Section 3.5}
 \begin{enumerate}
@@ -220,26 +218,41 @@
 	    $(P\lor Q) \land (P\lor R) \neq (R\land P) \lor (R \land Q)$\\
 	    They are not logically equivalent.
 	\item [A] Prove or disprove: $(P \oplus Q) \oplus R$ and $P \oplus (Q \oplus R)$\\
+	    $(P \oplus Q) \oplus R \equiv P \oplus (Q \oplus R)$\\
 	    Using the associative laws, we can see they're logically equivalent.
 	\item [B] Prove or disprove: $(P \oplus Q) \Rightarrow (P \oplus R)$ and $P \oplus (Q \Rightarrow R)$\\
-	    Using contrapositive laws, we can see they're logically equivalent.
+	    \begin{tabular}{l|l|c|c|c|c|c|c}
+		\hline
+		P & Q & R & $(P \oplus Q)$ & $(P\oplus R)$ &$ (P \oplus Q) \Rightarrow (P \oplus R)$ & $Q\Rightarrow R$ & $P \oplus (Q \Rightarrow R)$\\
+		\hline
+		T & T & T & F      & F     & T & T & F \\
+		T & T & F & F      & T     & T & F & T \\
+		T & F & T & T      & F     & F & T & F \\
+		T & F & F & T      & T     & T & T & F \\
+		F & T & T & T      & T     & T & T & T \\
+		F & T & F & T      & T     & T & F & F \\
+		F & F & T & F      & F     & T & T & T \\
+		F & F & F & F      & F     & T & T & T \\
+		\hline
+	    \end{tabular}\\\\
+	    They are not logically equivalent, based on the truth table.
 \end{enumerate}
 \section*{Exercises for Section 7.1}
 \begin{enumerate}
     \item $\forall x \in \mathbb{R}, x^2 > 0$\\
 	For every Real number x, $x^2$ is positive. \textbf{False}
     \item $\forall x \in \mathbb{R}, \exists n \in \mathbb{N}, x^n \ge 0$\\
-	For every Real number x, there's at least one Natural number n, that $x^n$ is zero or positive. \textbf{False}
+	For every Real number x, there's at least one Natural number n, that $x^n$ is zero or positive. \textbf{True}
     \item $\exists a \in \mathbb{R}, \forall x \in \mathbb{R}, ax=x$\\
 	There's at least one Real number a, that $ax=x$ for any Real number x. \textbf{True}
     \item $\forall X \in P(\mathbb{N}), X \subseteq \mathbb{R}$ \\
-	For every set X in $P(\mathbb{N})$, X is a subset of Real numbers. \textbf{True}
+	For every set X in $P(\mathbb{N})$, X is a subset of Real numbers. \textbf{False}
     \item $\forall n \in \mathbb{N}, \exists X \in P(\mathbb{N}), |X| < n$\\
 	For every Natural number n, there's at least one subset X of $\mathbb{N}$, that it's cardinatily is less than n. \textbf{True}
     \item $\exists n \in \mathbb{N}, \forall X \in P(\mathbb{N}), |X| < n$\\
-    There's at least one Natural number n, that $|x| < n$ for every subset X of $\mathbb{N}$. \textbf{False}
+    There's at least one Natural number n, that $|x| < n$ for every subset X of $\mathbb{N}$. \textbf{True}
     \item $\forall X \subseteq \mathbb{N}, \exists n \in \mathbb{Z}, |X| = n$\\
-	For every subset X of the Natural numbers, there's at least one integer n, that $|x| = n$. \textbf{False}
+	For every subset X of the Natural numbers, there's at least one integer n, that $|X| = n$. \textbf{False}
     \item $\forall n \in \mathbb{Z}, \exists X \subseteq \mathbb{N}, |X| = n$\\
 	For every integer n, there's at least one subset X of the Natural numbers, that the cardinatily of X is equal to n. \textbf{True}
     \item $\forall n \in \mathbb{Z}, \exists m \in \mathbb{Z}, m = n + 5$\\
@@ -249,9 +262,9 @@
     \item [A] $\exists x \in \mathbb{Z}, \forall y \in \mathbb{Z}, y -x=y$\\
 	\textbf{True}
     \item [B] $\forall x \in \mathbb{Z}, \exists y \in \mathbb{Z}, y -x=y$\\
-	\textbf{False}
+	\textbf{True}
     \item [C] $\exists x \in \mathbb{N}, \forall y \in \mathbb{N}, y-x=y$\\
-	\textbf{False}
+	\textbf{True}
     \item [D] $\forall x \in \mathbb{N}, \exists y \in \mathbb{N}, y-x=y$\\
 	\textbf{False}
     \item [E] $\exists x \in \mathbb{Z}, \forall y \in \mathbb{Z}, y\cdot x = y$\\
@@ -259,9 +272,9 @@
     \item [F] $\forall x \in \mathbb{Z}, \exists y \in \mathbb{Z}, y \cdot x =y$\\
 	\textbf{True}
     \item [G] $\exists x \in \mathbb{N}, \forall y \in \mathbb{N}, y\cdot x = y$\\
-	\textbf{True}
-    \item [H] $\forall x \in \mathbb{N}, \exists y \in \mathbb{N}, y\cdot x = y$\\
 	\textbf{False}
+    \item [H] $\forall x \in \mathbb{N}, \exists y \in \mathbb{N}, y\cdot x = y$\\
+	\textbf{True}
 \end{enumerate}
 \section*{Exercises for Section 7.3}
 \begin{enumerate}
@@ -277,7 +290,7 @@
 	\item If x is prime then $\sqrt{x}$ is not a rational number.\\
 	    p = x is prime\\
 	    q = $\sqrt{x}$ is a rational number\\
-	    $p \Rightarrow \neg q\le p$
+	    $p \Rightarrow \neg q$
 	\item For every prime number p there is another prime number q with $q>p$\\
 	    $\forall p \in primes, \exists q \in primes, q > p$
 	\item For every positive number $\varepsilon$, there is a positive number $\delta$ for which $|x-a| < \delta$ implies $|f(x) - f(a)| < \varepsilon$\\
@@ -285,7 +298,7 @@
 	\item [7] There exists a real number a for which $a+x=x$ for every real number x.\\
 	    $\exists a \in \mathbb{R}, \forall x \in \mathbb{R}, a+x=x$
 	\item [8] I don't eat anything that has a face.\\
-	    p = I eat anything that has a face\\
+	    p = I eat some things that have a face\\
 	    $\neg p$
 	\item [9] If x is a rational number and $x\neq 0$, then tan(x) is not a rational number.\\
 	    $((x\in \mathbb{Q}) \land (x \neq 0)) \Rightarrow \tan{x} \notin \mathbb{ Q}$
@@ -301,11 +314,11 @@
 	\item For every prime number p, there is another prime number q with $q>p$.\\
 	    There is at least one prime number p that $q\le p$ for every prime number q.
 	\item For every positive number $\varepsilon$, there is a positive number $\delta$ such that $|x-a| < \delta$ implies $|f(x) - f(a)| < \varepsilon$\\
-	    There is at least one positive number $\varepsilon$, that $(x-a \ge d) \lor |f(x) - f(a) < \varepsilon|$ for every positive number $\delta$
+	    There is at least one positive number $\varepsilon$, that $(x-a < d) \land |f(x) - f(a) \ge \varepsilon|$ for every positive number $\delta$
 	\item  [6] There exists a real number a for which $a+x=x$ for every real number x.\\
 	    For every real number a, there is another real number x such that $a+x\ne x$
 	\item  [7] I don't eat anything that has a face.\\
-	    I will eat some things that has a face.
+	    I will eat some things that have a face.
 	\item  [8] If x is a rational number and $x \ne 0$, then tan(x) is not a rational number.\\
 	    X is a rational number and $x\ne 0$ and tan(x) is a rational number.
 	\item  [9] If sin(x) $<$ 0, then it is not the case that $0 \le x \le \pi$.\\
@@ -323,8 +336,8 @@
 	    %(p -> ~q) =~p V ~q
 	    %~(p -> q) = ~p V q
 	\item [A] Write $\neg(\exists x \in \mathbb{R}, \forall y \in \mathbb{R}, \exists z \in \mathbb{R}, z > y \Rightarrow z > x^2)$ without using the $\neg$ symbol.\\
-	    $\forall x \in \mathbb{R}, \exists y \in \mathbb{R}, \forall z \in \mathbb{R}, (z \le y \lor z > x^2)$
+	    $\forall x \in \mathbb{R}, \exists y \in \mathbb{R}, \forall z \in \mathbb{R}, (z > y \land z \le x^2)$
 	\item [B] Write $\neg(\forall x,y \in \mathbb{R}, x < y \Rightarrow \exists z \in \mathbb{R}, x < z < y)$ without using the $\neg$ symbol.\\
-	    $\exists x,y \in \mathbb{R}, x \ge y \lor \exists z \in \mathbb{R}, z \le x \land z \ge y$
+	    $\exists x,y \in \mathbb{R}, x < y \land \forall z \in \mathbb{R}, z \le x \lor z \ge y$
 \end{enumerate}
 \end{document}
