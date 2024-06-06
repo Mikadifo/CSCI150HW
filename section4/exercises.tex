@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[margin=1cm, paperheight=74in]{geometry}
+\usepackage[margin=1cm, paperheight=44in]{geometry}
 \usepackage{amsfonts, multicol, pgfplots, tikz}
 
 \pgfplotsset{compat=1.18}
@@ -11,13 +11,66 @@
 \maketitle
 \section*{Exercises for Section 4.2}
 \begin{enumerate}
-    \item ffff
-    % 3 5 7 9 10
+    \item Consider lists made from the letters T, H, E, O, R, Y, with repetition allowed.
+	\begin{itemize}
+	    \item Length 4 lists: \textbf{6x6x6x6}
+	    \item Length 4 lists that begin with T: \textbf{1x6x6x6}
+	    \item Length 4 lists that do not begin with T: \textbf{5x6x6x6}
+	\end{itemize}
+    \item [3] How many lists of length 3 can be made from the symbols A, B, C, D, E, F if...
+	\begin{itemize}
+	    \item repetition is allowed: \textbf{6x6x6}
+	    \item repetition is not allowed: \textbf{6x5x4}
+	    \item repetition is not allowed and the list must contain the letter A:\\
+		(A,\_,\_) = 1x5x4\\
+		(\_,A,\_) = 5x1x4\\
+		(\_,\_,A) = 5x4x1\\
+		\textbf{= 3(5x4)}
+	    \item repetition is allowed and the list must contain the letter A:\\
+		$|U| = 6x6x6, |X^c| = 5x5x5, |X| = (6x6x6)-(5x5x5)$
+	\end{itemize}
+    \item [5] This problem involves 8-digit binary strings such as 10011011 or 00001010 (i.e.,
+8-digit numbers composed of 0’s and 1’s).
+	\begin{itemize}
+	    \item How many such string are there? \textbf{2x2x2x2x2x2x2x2}
+	    \item How many such string end in 0? \textbf{2x2x2x2x2x2x2x1}
+	    \item How many such string have 1's for their second and fourth digits? \textbf{2x1x2x1x2x2x2x2}
+	    \item How many such string have 1's for their second or fourth digits?\\
+		$|A\cup B| = 2x1x2x1x2x2x2x2$\\
+		$|A| = 2x1x2x2x2x2x2x2$\\
+		$|B| = 2x2x2x1x2x2x2x2$\\
+		$= 2^7 + 2^7 - 2^6 = 192$
+	\end{itemize}
+    \item [7] This problem concerns 4-letter codes made from the letters A, B, C, D, ... , Z.
+	\begin{itemize}
+	    \item How many such codes can be made? \textbf{26x26x26x26}
+	    \item How many such codes have no two consecutive letters the same?\\
+		letter 1: any of all 26\\
+		letter 2: 26 - the first = 25\\
+		letter 3: 26 - the second = 25\\
+		letter 4: 26 - the third = 25\\
+		\textbf{26x25x25x25}
+	\end{itemize}
+    \item [9] A new car comes in a choice of five colors, three engine sizes and two transmissions. How many different combinations are there?\\
+	Total length is 3, first is 5 colors, second is 3 engine sizes and last is 2 transmissions.\\
+	\textbf{5x3x2}
+    \item [10] A dice is tossed four times in a row. There are many possible outcomes. How many different outcomes are possible?\\
+	Length is 4, a dice has numbers from 1 to 6. \textbf{6x6x6x6}
 \end{enumerate}
 \section*{Exercises for Section 4.3}
 \begin{enumerate}
-    \item ffff
-    % 1 3 5 7 9 11
+    \item Five cards are dealt off of a standard 52-card deck and lined up in a row.
+	\begin{itemize}
+		\item How many such lineups are there that have at least one red card?\\
+		    $|U| = $52x51x50x49x48, $|X^c|$ = 26x25x24x23x22\\
+		    \textbf{(52x51x50x49x48) - (26x25x24x23x22)}
+		\item How many such lineups are there in which the cards are either all black or all hearts?\\
+		    They are not black cards that are hearts, so we use the addition principle:\\
+		    All black cards: 26x25x24x23x22\\
+		    All hearts: 13x12x11x10x9\\
+		    \textbf{(26x25x24x23x22) + (13x12x11x10x9)}
+	\end{itemize}
+    % 3 5 7 9 11
 \end{enumerate}
 \section*{Exercises for Section 4.4}
 \begin{enumerate}
