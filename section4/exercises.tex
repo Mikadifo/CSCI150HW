@@ -70,7 +70,31 @@
 		    All hearts: 13x12x11x10x9\\
 		    \textbf{(26x25x24x23x22) + (13x12x11x10x9)}
 	\end{itemize}
-    % 3 5 7 9 11
+    \item [3] Five cards are dealt off of a standard 52-card deck and lined up in a row.
+	\begin{itemize}
+		\item How many such lineups are there in which all 5 cards are of the same color (i.e., all black or all red)?\\
+		    There can't be black cards that are red, so we use addition principle:\\
+		    All black cards: 26x25x24x23x22\\
+		    All red cards: 26x25x24x23x22\\
+		    \textbf{(26x25x24x23x22) + (26x25x24x23x22)}
+	\end{itemize}
+    \item [5] How many integers between 1 and 9999 have no repeated digits?\\
+	1-digit: 9, 2-digit: 9x9, 3-digit: 9x9x8, 4-digit: 9x9x8x7\\
+	\textbf{9+(9x9)+(9x9x8)+(9x9x8x7)}
+	\begin{itemize}
+		\item How many have at least one repeated digit?\\
+		    Using the substraction principle:\\
+		    $|U| = 9999, |x^c| =$ 9+(9x9)+(9x9x8)+(9x9x8x7)\\
+		    $|X|$ = \textbf{9999 -(9+(9x9)+(9x9x8)+(9x9x8x7))}
+	\end{itemize}
+    \item [7] A password on a certain site must be five characters long, made from letters of the alphabet, and have at least one upper case letter.
+	\begin{itemize}
+	    \item How many different passwords are there?\\
+		$|U| = 52^5, |X^c= 26^5|$\\
+		$|X| = $\textbf{$52^5 - 26^5$}
+	    \item What if there must be a mix of upper and lower case?
+	\end{itemize}
+    % 9 11
 \end{enumerate}
 \section*{Exercises for Section 4.4}
 \begin{enumerate}
