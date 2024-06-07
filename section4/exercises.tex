@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
 \usepackage[margin=1cm, paperheight=44in]{geometry}
-\usepackage{amsfonts, multicol, pgfplots, tikz}
+\usepackage{amsfonts, multicol, pgfplots, tikz, cancel}
 
 \pgfplotsset{compat=1.18}
 \title{Counting Homework}
@@ -92,28 +92,65 @@
 	    \item How many different passwords are there?\\
 		$|U| = 52^5, |X^c= 26^5|$\\
 		$|X| = $\textbf{$52^5 - 26^5$}
-	    \item What if there must be a mix of upper and lower case?
+	    \item What if there must be a mix of upper and lower case?\\
+		$|U| = 52^5, |X^c= 26^5 \cdot 2|$\\
+		$|X| = $\textbf{$52^5 - (26^5 + 26^5)$}
 	\end{itemize}
-    % 9 11
 \end{enumerate}
 \section*{Exercises for Section 4.4}
 \begin{enumerate}
-    \item [3] ffff
-    % 5 7 9 11 13 15 17
+    \item [3] How many 5-digit positive integers are there in which there are no repeated
+digits and all digits are odd?\\
+	Odds: 1,3,5,7,9, total 5 numbers. \textbf{=5!}
+    \item [5] Using only pencil and paper, find the value of $\frac{120!}{118!}$\\
+	$\frac{120\cdot 119 \cdot \cancel{118!}}{\cancel{118!}} = 120\cdot 119$
+    \item [9] How many permutations of the letters A, B, C, D, E, F, G are there in which the
+three letters ABC appear consecutively, in alphabetical order?\\
+	n = 7 - ABC = 5, \textbf{5!}
+    \item [13] How many lists of length six (with no repetition) can be made from the 26 letters
+of the English alphabet?\\
+	$P(26,6) =$ \textbf{26x25x24x23x22x21}
+    \item [15] In a club of 15 people, we need to choose a president, vice-president, secretary,
+and treasurer. In how many ways can this be done?\\
+	$P(15, 4) =$ \textbf{15x14x13x12}
+    \item [17] Three people in a group of ten line up at a ticket counter to buy tickets. How
+many lineups are possible?\\
+	$P(10, 3) =$ \textbf{10x9x8}
 \end{enumerate}
 \section*{Exercises for Section 4.5}
 \begin{enumerate}
-    \item [5] ffff
-    % 5 6 7 11 15 17 19
+    \item [5] How many 16-digit binary strings contain exactly seven 1’s? (Examples of such
+strings include 0111000011110000 and 0011001100110010, etc.)\\
+	$C_{16}^7 = \frac{16!}{7!9!}$
+    \item [6] $|{X \in P({0,1,2,3,4,5,6,7,8,9}): |X| = 4}|$\\
+	$= C_{10}^4 = \frac{10!}{4!6!}$
+    \item [7] $|{X \in P({0,1,2,3,4,5,6,7,8,9}): |X| < 4}|$\\
+	We can have a $\phi$ subset. Therefore $= C_{10}^0 + C_{10}^1 + C_{10}^2 + C_{10}^3$
+    \item [17] How many 10-digit binary strings are there that have exactly four 1’s or exactly
+five 1’s?\\
+	$C_{10}^4 + C_{10}^5$
+	\begin{itemize}
+	    \item How many do not have exactly four 1’s or exactly five 1’s?\\
+		$|U| = 2^{10}$\\
+		$2^{10} - C_{10}^4 - C_{10}^5$
+	\end{itemize}
+    \item [19] A 5-card poker hand is called a flush if all cards are the same suit. How many
+different flushes are there?\\
+	There are 13 cards in each suit and there are 4 suits. There are $C_{13}^5 \cdot 4$ different flushes.
 \end{enumerate}
 \section*{Exercises for Section 4.7}
 \begin{enumerate}
     \item ffff
-    % 3 4 (you may skip part c) 7 9 11 13 15
+    \item [3] ffff
+    \item [13] ffff
+    \item [15] ffff
 \end{enumerate}
 \section*{Exercises for Section 4.8}
 \begin{enumerate}
     \item ffff
-    % 3 5 7 9 11 13 20
+    \item [7] ffff
+    \item [9] ffff
+    \item [11] ffff
+    \item [20] ffff
 \end{enumerate}
 \end{document}
