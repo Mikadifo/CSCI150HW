@@ -53,11 +53,21 @@
 \end{enumerate}
 \section*{Exercises for Section 5.3}
 \begin{enumerate}
-    \item [2] fff
-    \item [4] fff
-    \item [7] fff
-    \item [9] fff
-    \item [11] fff
+    \item [2] A box contains six tickets: A A B B B E . You remove two tickets, one after the other. What is the probability that both tickets are vowels?\\
+	$|S| = 6x5, |E| = 3x2, p(E) = \dfrac{3x2}{6x5}$
+    \item [4] A card is drawn off a 52-card deck. Let A be the event “The card is a heart.” Let B be the event “The card is a queen.” Are these two events independent or dependent?\\
+	$|S| = 52, p(A) = 13/52 = 1/4, p(B) = 4/52 1/13, p(A|B) = 1/4, p(B|A) = 1/13$\\
+	\textbf{They're independent}
+    \item [7] Say A and B are events with $P(A) = 2/3, P(A|B) = 3/4$, and $P(B|A) = 1/2$. Find $p(B)$.\\
+	$p(A)\cdot p(B|A) = p(A\cap B) = p(B) \cdot p(A|B)$\\
+	$2/3 \cdot 1/2 = p(B) \cdot 1/4$\\
+	$p(B) = \dfrac{4}{9}$
+    \item [9] A box contains 2 red balls, 3 black balls, and 4 white balls. One is removed, and then another is removed. What is the probability that no black balls were drawn?\\
+	$|S| = 9x8, |E| = 6x5, p(E) = \dfrac{6x5}{9x8}$
+    \item [11] A coin is flipped 5 times, and there are more tails than heads. What is the probability that the first flip was a tail?\\
+	$|S| = 2^5 = 32, A = more\ tails, B = first\ tail, p(B|A) = p(A\cap B)/p(A)$\\
+	$|A \cap B| = C_4^2 + C_4^3 + C_4^4 = 11, |A| = C_5^3 + C_5^4 + C_5^5 = 16$\\
+	$p(B|A) = \dfrac{11}{16}$
 \end{enumerate}
 \section*{Exercises for Section 5.5}
 \begin{enumerate}
