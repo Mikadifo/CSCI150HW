@@ -71,8 +71,14 @@
 \end{enumerate}
 \section*{Exercises for Section 5.5}
 \begin{enumerate}
-    \item fff
-    \item fff
-    \item fff
+    \item At a certain college, 40\% of the students are male, and 60\% are female. Also, 20\% of the males are smokers, and 10\% of the females are smokers. A student is chosen at random. If the student is a smoker, what is the probability that the student is female?\\
+	S1 = male, S2 = female, $p(s2|E) = p(s2) \cdot p(e|s2)/p(s2) \cdot p(e|s2) + p(s1) \cdot p(e|s1)$\\
+	$p(s2|E) = \dfrac{0.6 \cdot 0.10}{0.6 \cdot 0.10 + 0.4 \cdot 0.2}$
+    \item At a certain college, 30\% of the students are freshmen. Also, 80\% of the freshmen live on campus, while only 60\% of the non-freshman students live on campus. A student is chosen at random. If the student lives on campus, what is the probability that the student is a freshman?\\
+	S1 = non-freshman, S2 = freshmen, $p(s2|E) = p(s2) \cdot p(e|s2)/p(s2) \cdot p(e|s2) + p(s1) \cdot p(e|s1)$\\
+	$p(s2|E) = \dfrac{0.3 \cdot 0.8}{0.3 \cdot 0.8 + 0.7 \cdot 0.6}$
+    \item A jar contains 4 red balls and 5 white balls. A random ball is removed, and then another is removed. If the second ball was red, what is the probability that the first ball was red?\\
+	$|S| = 9x8$, A = 1st is red, B = 2nd is red\\
+	$p(A|B) = \dfrac{3x4}{8x4} = 3/8$
 \end{enumerate}
 \end{document}
