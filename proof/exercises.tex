@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[margin=1cm, paperheight=28in]{geometry}
+\usepackage[margin=1cm, paperheight=38in]{geometry}
 \usepackage{amsfonts, multicol, cancel, amsxtra}
 
 \title{Proof Homework}
@@ -116,85 +116,205 @@
 \end{enumerate}
 \section*{Exercises for Section 9}
 \begin{enumerate}
-	\item ffff
-	\item [3] ffff
-	\item [5] ffff
-	\item [7] ffff
-	\item [9] ffff
-	\item [11] ffff
-	\item [15] ffff
-	\item [17] ffff
-	\item [19] ffff
-	\item [20] ffff
-	\item [23] ffff
-\end{enumerate}
-\section*{Exercises for Section 10}
-\begin{enumerate}
-	\item ffff
-	\item [3] ffff
-	\item [9] ffff
-	\item [11] ffff
-\end{enumerate}
-\begin{itemize}
-	\item Prove that the sum of a rational number and an irrational number is always irrational.
-	\item Prove that the product of a nonzero rational number and an irrational number is always an irrational number. (Why "nonzero"?)
-\end{itemize}
-\section*{Exercises for Section 12}
-\begin{enumerate}
-	\item ffff
-	\item [3] ffff
-	\item [5] ffff
-	\item [9] ffff
-	\item [11] ffff
-	\item [15] ffff
-	\item [17] ffff
-	\item [18] ffff
-	\item [20] ffff
-\end{enumerate}
-\section*{Exercises for Section 13}
-\begin{enumerate}
-	\item ffff
-	\item [7] ffff
-	\item [9] ffff
-	\item [11] ffff
-	\item [13] ffff
-	\item [29] ffff
-\end{enumerate}
-\end{document} 
-	    \end{split}
-	\end{equation*}
-	\end{multicols}
-    \item [17] 
+    \item By the contrapositive, suppose If n is odd then $n^2$ is odd
 	\begin{equation*}
 	    \begin{split}
-	    	ff
+	    n = 2a + 1, a \in \mathbb{Z}\\
+	    n^2 = (2a + 1)^2\\
+	    = 4a^2 + 4a + 1 = 2(2a^2 + 2a) + 1\\
+	    = 2a^2 + 2a \in \mathbb{Z}\\
+	    \text{Therefore, by the contrapositive,If $n^2$ is even, then n is even}
 	    \end{split}
 	\end{equation*}
-\end{enumerate}
-\section*{Exercises for Section 9}
-\begin{enumerate}
-	\item ffff
-	\item [3] ffff
-	\item [5] ffff
-	\item [7] ffff
-	\item [9] ffff
-	\item [11] ffff
-	\item [15] ffff
-	\item [17] ffff
-	\item [19] ffff
-	\item [20] ffff
-	\item [23] ffff
+	\item [3]
+	    \begin{equation*}
+	    	\begin{split}
+		    a = 2x, x \in \mathbb{Z}\\
+		    b = 2y, y \in \mathbb{Z}\\
+		    a^2(b^2 - 2b) = 4x^2(4y^2 - 4y)\\
+		    = 16x^2y^2 - 16x^2y = 2(8x^2y^2 -8x^2y)\\
+		    = 8x^2y^2 -8x^2y \in \mathbb{Z}\\
+		    \text{Therefore, by the contrapositive, if $a^2(b^2 -2b)$ is odd, then a and b are odd}
+	    	\end{split}
+	    \end{equation*}
+	\item [5] By the contrapositive, If $x \ge 0$, then $x^2 + 5x \ge 0$
+	\item [7]
+	    \begin{multicols}{2}
+		\begin{equation*}
+		\begin{split}
+		\text{Case 1: a odd, b even}\\
+		    a = 2x + 1, x \in \mathbb{Z}\\
+		    b = 2y, y \in \mathbb{Z}\\
+		    a\cdot b = 4xy + 2y\\
+		    = 2(2xy + y), (2xy + y) \in \mathbb{Z}\\
+		    \text{a times b is even}\\
+		    a + b = 2x + 2y + 1\\
+		    = 2(x + y) + 1\\
+		    \text{a + b is odd}
+		\end{split}
+		\end{equation*}
+		\begin{equation*}
+		\begin{split}
+		\text{Case 2: b odd, a even}\\
+		    a = 2x, x \in \mathbb{Z}\\
+		    b = 2y + 1, y \in \mathbb{Z}\\
+		    a\cdot b = 4xy + 2x\\
+		    = 2(2xy + x), (2xy + x) \in \mathbb{Z}\\
+		    \text{a times b is even}\\
+		    a + b = 2x + 2y + 1\\
+		    = 2(x + y) + 1\\
+		    \text{a + b is odd}
+		\end{split}
+		\end{equation*}
+	    \end{multicols}
+	    \begin{equation*}
+	    	\begin{split}
+		\text{Case 3: both odd}\\
+		    a = 2x + 1, x \in \mathbb{Z}\\
+		    b = 2y + 1, y \in \mathbb{Z}\\
+		    a\cdot b = 4xy + 2x + 2y + 1\\
+		    = 2(2xy + x + y) + 1, (2xy + x + y) \in \mathbb{Z}\\
+		    \text{a times b is odd}\\
+		    a + b = 2x + 2y + 1 + 1\\
+		    = 2(x + y + 1) + 1\\
+		    \text{a + b is even}
+	    	\end{split}
+	    \end{equation*}
+	    Therefore, by the contrapositive, in all cases, there's at least one odd when at least a or b are odd
+	\item [9]
+	    \begin{equation}
+	    	\begin{split}
+		    n = 3x, x \in \mathbb{Z}\\
+		    n^2 = 9x^2 = 3(3x^2)\\
+		    \text{Therefore, by the contrapositive, if 3 is not divisible by $n^2$, then 3 is not divisible by n}
+	    	\end{split}
+	    \end{equation}
+	\item [11]
+	    \begin{equation*}
+	    	\begin{split}
+		    x = 2a + 1, a \in \mathbb{Z}\\
+		    y = 2b, b \in \mathbb{Z}\\
+		    x^2 (y+3) = (4a^2 + 4a + 1)(2b + 3)\\
+		    = 8a^2b + 8ab + 2b + 12a^2 + 12a + 2 + 1\\
+		    = 2(4a^2b + 4ab + b + 6a^2 + 6a + 1) + 1\\
+		    (4a^2b + 4ab + b + 6a^2 + 6a + 1) \in \mathbb{Z}\\
+		    \text{Therefore, by the contrapositive, if $x^2(y + 3)$ is even, then x is even or y is odd}
+	    	\end{split}
+	    \end{equation*}
+	\item [15]
+	    \begin{equation*}
+	    	\begin{split}
+		    x = 2a, a \in \mathbb{Z}\\
+		    x^3 - 1 = (2a)^3 - 1\\
+		    = 8a^3 - 1 = 2(4a^3 - 1) + 1\\
+		    4a^3 - 1 \in \mathbb{Z}\\
+		    \text{Therefore, by the contrapositive, if $x^3-1$ is even the x is odd}
+	    	\end{split}
+	    \end{equation*}
+	\item [17] 
+	    \begin{equation*}
+	    	\begin{split}
+		    n = 2a + 1, a \in \mathbb{Z}\\
+		    n^2 -1 = 8b, b\in \mathbb{Z}\\
+		    n^2 - 1 = 4a^2 + 4a = 4a(a + 1)\\
+		    a(a+1), \in \mathbb{Z} = 2b\ even = 4(2b) = 8b\\
+		    \text{Therefore, by direct proof, if n is odd, then 8 is divisible by $n^2 -1$}
+	    	\end{split}
+	    \end{equation*}
+	\item [19] 
+	    \begin{equation*}
+	    	\begin{split}
+		    a-b = nx, x \in \mathbb{Z}\\
+		    a-c = ny, y \in \mathbb{Z}\\
+		    c-b = n(x - y)\\
+		    \text{Therefore, by direct proof, c$\equiv b$ (mod n)}
+	    	\end{split}
+	    \end{equation*}
+	\item [20] 
+	    \begin{equation*}
+	    	\begin{split}
+		    a - 1 = 5x, x \in \mathbb{Z}\\
+		    a = 5x + 1\\
+		    a^2 = 25x^2 + 10x + 1\\
+		    a^2 - 1 = 25x^2 + 10x\\
+		    a^2 - 1 = 5(5x^2 + 2x)\\
+		    5x^2 + 2x \in \mathbb{Z}\\
+		    \text{Therefore, if a congruence 1 mod 5, then $a^2 \equiv 1$ (mod 5)}
+	    	\end{split}
+	    \end{equation*}
+	\item [23] 
+	    \begin{equation*}
+	    	\begin{split}
+		    a -b = nx, x \in \mathbb{Z}\\
+		    ac - bc = nxc, xc = y, y \in \mathbb{Z}\\
+		    \text{Therefore, if $a \equiv b (mod\ n),$then $ca\equiv cb (mod\ n)$}
+	    	\end{split}
+	    \end{equation*}
 \end{enumerate}
 \section*{Exercises for Section 10}
 \begin{enumerate}
-	\item ffff
-	\item [3] ffff
-	\item [9] ffff
-	\item [11] ffff
+	\item 
+	    \begin{equation*}
+	    	\begin{split}
+		    n = 2a + 1, a \in \mathbb{Z}\\
+		    n^2 = 4a^2 + 4a + 1 = 2(2a^2 + 2a) + 1\\
+		    2b + 1, b = (2a^2 + 2a) \in \mathbb{Z}\\
+		    \text{Therefore, by the contradiction, $n^2$ is even and odd, which is a contradiction.}
+	    	\end{split}
+	    \end{equation*}
+	\item [3]
+	    \begin{equation*}
+	    	\begin{split}
+		    \text{By contradiction, $\sqrt[3]{2}$ is rational}\\
+		    \sqrt[3]{2} = a/b, \text{In their simpliest form}\\
+		    2 = a^3/b^3 = 2b^3 = a^3, a \ is \ even\\
+		    2b^3 = (2c)^3 = 8c^3 = 2(4c^3), b\ is \ even \\
+		    \text{Therefore, by contradiction, a, b are both even and odd}
+	    	\end{split}
+	    \end{equation*}
+	\item [9] 
+	    \begin{equation*}
+	    	\begin{split}
+		    \text{By contradiction, if a is rational and ab is irrational, then b is rational}\\
+		    a = n/m, n,m \in \mathbb{Z }\\
+		    b = x/y, x,y \in \mathbb{Z }\\
+		    ab = nx/my\\
+		    \text{Therefore, by contradiction, ab is both rational and irrational}
+	    	\end{split}
+	    \end{equation*}
+	\item [11] 
+	    \begin{equation*}
+	    	\begin{split}
+		    \text{By contradiction, integers a and b exist, for which 18a+6b = 1}\\
+		    1 = 18a + 6b\\
+		    1 = 2(9a + 3b)\\
+		    \text{Therefore, by contradiction, 1 is even and odd}
+	    	\end{split}
+	    \end{equation*}
 \end{enumerate}
 \begin{itemize}
 	\item Prove that the sum of a rational number and an irrational number is always irrational.
+	    \begin{equation*}
+	    	\begin{split}
+		    \text{By contradiction, the sum of a rational number and an irrational number is always rational}\\
+		    a = x/y, x,y \in \mathbb{Z}\\
+		    b = irrational\\
+		    a + b = n/m, n, m \in \mathbb{Z}\\
+		    b = n/m - x/y\\
+		    \text{$n/m\ and\ x/y$, are rational, therefore, by contradiction, b is rational and irrational }
+	    	\end{split}
+	    \end{equation*}
 	\item Prove that the product of a nonzero rational number and an irrational number is always an irrational number. (Why "nonzero"?)
+	    \begin{equation*}
+	    	\begin{split}
+		    \text{By contradiction, a product of a nonzero rational number and an irrational number is always a rational number}\\
+		    a = x/y, x, y \in \mathbb{Z}\\
+		    ab = n/m, n, m \in \mathbb{Z}\\
+		    b = (n/m)/(x/y)\\
+		    b = ny/mx\\
+		    \text{Therefore, by contradiction, b is both rational and irrational}
+	    	\end{split}
+	    \end{equation*}
 \end{itemize}
 \section*{Exercises for Section 12}
 \begin{enumerate}
