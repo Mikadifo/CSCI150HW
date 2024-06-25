@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[margin=1cm, paperheight=44in]{geometry}
+\usepackage[margin=1cm, paperheight=50in]{geometry}
 \usepackage{amsfonts, multicol, amsxtra}
 
 \title{Math Induction Homework}
@@ -156,12 +156,23 @@
     \item [A] 
 	\begin{equation*}
 		\begin{split}
-		    \text{Step 1:}\\
-		    n = 1, 1 + 5 +2 = 
-		    \text{Step 2: Suppose}\\
-		    \text{We want to proof this:}\\
-		    \text{Therefore, we proofed the proposition is true}
-		    %TODO
+		    k^2 + 5k + 1\ even\\
+		    p(k+1) = (k+1)^2 + 5(k +1) + 1\ even\\
+		    =k^2 + 2k + 1 + 5k +5 + 1 = k^2 + 7k + 7\\
+		    = (k^2 + 5k + 1) + 2k + 6\\
+		    2k+ 6 = 2(k + 3), \in \mathbb{Z}\ even\\
+		    \text{a) Therefore, we proofed the proposition is true}\\
+		    \text{Case 1: n is even}\\
+		    n = 2m, m \in \mathbb{Z}\\
+		    n^2 + 5n + 1 = (2m)^2 + 5(2m) + 1 = 4m^2 + 10m + 1\\
+		    = 2(2m^2 + 5m) + 1\ =\ odd\\
+		    \text{Case 2: n is odd}\\
+		    n = 2m + 1, m \in \mathbb{Z}\\
+		    n^2 + 5n + 1 = (2m+1)^2 + 10m + 6\\
+		    = 4m^2 + 14m + 2\\
+		    = 2(2m^2 + 7m + 2) \in \mathbb{Z} = even\\
+		    \text{b) Therefore, when n is even, p(n) is odd and when n is odd, p(n) is even}\\
+		    \text{c) Therefore, $p(n) \Rightarrow p(n+1)$ is True, but it doesn't mean that p(n) is always even.}\\
 		\end{split}
 	\end{equation*}
     \item [B] 
