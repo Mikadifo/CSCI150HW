@@ -38,21 +38,140 @@
 	It is symmetric, and transitive\\
 	\item [7] R=reflexive, T = transitive and S= symmetric\\
 	    \includegraphics*[height=6cm]{4}
-	\item [11] It's reflexive, symmetric and transitive\\
+	\item [11] It's reflexive, symmetric and transitive 
 	\item [12]
+	    \begin{equation*}
+	    	\begin{split}
+		    \text{Reflexive}\\
+		    x|x, x=xn, n \in \mathbb{Z}\\
+		    x/x = n, n = 1\\
+		    x=x(1)\\
+		    \text{Therefore, it's reflexive}\\
+		    \text{Transitive, if x$|$y and y$|$z, then x$|$z}\\
+		    x|y, y = xn, n \mathbb{Z}\\
+		    y|z, z = ym, m \mathbb{Z}\\
+		    z = xn(m)\\
+		    z = x(nm)\\
+		    \text{Therefore, it's transitive}
+	    	\end{split}
+	    \end{equation*}
 	\item [13]
-	\item [15]
+	    \begin{equation*}
+	    	\begin{split}
+		    \text{Reflexive}\\
+		    xRx, x-x = 0 \in \mathbb{Z}\\
+		    \text{Therefore, it's reflexive}\\ 
+		    \text{Symmetric}\\
+		    xRy, x -y\in \mathbb{Z}\\
+		    = -(x-y) = y-x\\
+		    \text{Therefore, it's symmetric}\\ 
+		    \text{Transitive}\\
+		    xRy \land yRz \Rightarrow xRz\\
+		    x-y \in \mathbb{Z }, y-z \in \mathbb{Z}\\
+		    (x-y) + (y-z) = x-z \in \mathbb{Z}\\
+		    \text{Therefore, it's transitive}
+	    	\end{split}
+	    \end{equation*}
+	\item [15] By counterexample, A = {1,2,3}, R = {(1,1), (1,2), (2,1), (2,2)}, it's not reflexive.
 	\item [16]
+	    \begin{equation*}
+	    	\begin{split}
+		    R = \{(x,y) \in \mathbb{Z}x\mathbb{Z} : xRy \Leftrightarrow x^2 \equiv y^2 (mod\ 4)\}\\
+		    \text{Reflexive}\\
+		    xRx, x^2 \equiv x^2 (mod\ 4), 4|(x^2-x^2)\\
+		    4|0, true\\
+		    4|0, x^2 -x^2 = (0)\\
+		    \text{Therefore, it's reflexive}\\ 
+		    \text{Symmetric}\\
+		    xRy, x^2 \equiv y^2 (mod\ 4), 4|(x^2-y^2)\\
+		    4|(y^2 - x^2), true, yRx\\
+		    \text{Therefore, it's symmetric}\\ 
+		    \text{Transitive}\\
+		    xRy, x^2 \equiv y^2 (mod\ 4), 4|(x^2-y^2), x^2 = y^2 + 4a, a \in \mathbb{Z}\\
+		    yRz, y^2 \equiv z^2 (mod\ 4), 4|(y^2-z^2), y^2 = z^2 + 4b, b \in \mathbb{Z}\\
+		    x^2 = z^2 + 4a + 4b\\
+		    x^2 = z^2 + 4(a+b)\\
+		    a+b = c, c \in \mathbb{Z}, \text{c is a multiple of 4}\\
+		    4|x^2 -z^2\\
+		    \text{Therefore, it's transitive}
+	    	\end{split}
+	    \end{equation*}
 \end{enumerate}
 \section*{Exercises for Section 16.3}
 \begin{enumerate}
-	\item 
-	\item [3]
-	\item [5]
-	\item [6]
+    \item
+	\begin{equation*}
+	    \begin{split}
+		[1] = \{1\}\\
+		[2] = \{2, 3\}\\
+		[3] = \{3, 2\}\\
+		[4] = \{4, 5, 6\}\\
+		[5] = \{4, 5, 6\}\\
+		[6] = \{4, 5, 6\}\\
+	    \end{split}
+	\end{equation*}
+    \item [3] R = {(a, d),(b, c),(a, a),(c, c),(b, b),(e, e),(d, d),(d, a),(c, b)}
+    \item [5] R1 = {(a, a), (b, b), (a, b), (b, a)}, R2 = {(a, a), (b, b)}
+    \item [6] R1 = {(a,a),(b,b),(c,c)}\\
+	R2 = {(a,a),(b,b),(c,c),(a,b),(b,a),(c,a),(a,c),(c,b),(b,c)}\\
+	R3 = {(a,a),(b,b),(c,c), (a,b), (b, a)}\\
+	R4 = {(a,a),(b,b),(c,c), (c, a), (a, c)}\\
+	R5 = {(a,a),(b,b),(c,c), (b, c), (c, b)}\\
 	\item [7]
+	    \begin{equation*}
+		\begin{split}
+		    \text{Reflexive}\\
+		    xRx, 3x-5x = -2x, even\\
+		    \text{Therefore, it's reflexive}\\
+		    \text{Symmetric}\\
+		    xRy, 3x-5y = 2a\\
+		    3x-5y + 8y -8x = 2a + 8y-8x\\
+		    3y -5x = 2(a + 4y -4x)\\
+		    \text{Therefore, it's symmetric}\\
+		    \text{Transitive}\\
+		    xRy, 3x-5y = 2a\\
+		    yRz, 3y-5z = 2b\\
+		    (3x-5y) +(3y-5z) = 2a + 2b\\
+		    3x - 5z = 2a + 2b + 2y\\
+		    3x - 5z = 2(a + b + y)\\
+		    \text{Therefore, it's transitive}\\
+		    \text{Equivalence classes}\\
+		    [0] = \{x \in \mathbb{Z}: xR0\} = \{x\in \mathbb{Z}: 3x-0\ even\}\\
+		    = \{x\in \mathbb{Z}:x\ even\}\\
+		    \text{[0] = All even integers}\\
+		    [1] = \{x \in \mathbb{Z}: xR1\} = \{x\in \mathbb{Z}: 3x-5\ even\}\\
+		    = \{x\in \mathbb{Z}:x\ odd\}\\
+		    \text{[1] = All odd integers}
+		\end{split}
+	    \end{equation*}
 	\item [9]
-	\item [11]
+	    \begin{equation*}
+	    	\begin{split}
+		    \text{Reflexive}\\
+		    xRx, 4|(4x) = 4|4,\ true\\
+		    \text{Therefore, it's reflexive}\\
+		    \text{Symmetric}\\
+		    xRy, 4|(x + 3y), x + 3y = 4n, n\in \mathbb{Z}\\
+		    3x + 9y = 12n\\
+		    y+3x = 12n - 8y\\
+		    y+3x = 4(3n - 2y)\\
+		    3n-2y \in \mathbb{Z}, 4|(y+3x)\\
+		    \text{Therefore, it's symmetric}\\
+		    xRy, 4|(x + 3y), x + 3y = 4n, n\in \mathbb{Z}\\
+		    yRz, 4|(y + 3z), y + 3z = 4m, m\in \mathbb{Z}\\
+		    x+3y+y+3z = 4n+4m\\
+		    x+3z = 4(n+m-y)\\
+		    n+m-y \in \mathbb{Z}, 4|(x+3z)\\
+		    \text{Transitive}\\
+		    \text{Therefore, it's transitive}\\
+		    \text{Equivalence classes}\\
+		    [0] = \{x \in \mathbb{Z}: 4|x\} = \{\cdots, -4, 0, 4, 8, 12, \cdots\}\\
+		    [1] = \{x \in \mathbb{Z}: 4|x+3\} = \{\cdots, -3, 1, 5, 9, 13, \cdots\}\\
+		    [2] = \{x \in \mathbb{Z}: 4|x+6\} = \{\cdots, -2, 2, 6, 10, 14, \cdots\}\\
+		    [3] = \{x \in \mathbb{Z}: 4|x+9\} = \{\cdots, -1, 3, 7, 11, 15, \cdots\}\\
+	    	\end{split}
+	    \end{equation*}
+	\item [11] This is not true. By the counterexample on the Relation based on Z, where xRy such that 3x-5y is even. It has 2 equivalence classes.
 \end{enumerate}
 \section*{Exercises for Section 16.4}
 \begin{enumerate}
