@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[margin=1cm, paperheight=24in]{geometry}
+\usepackage[margin=1cm, paperheight=44in]{geometry}
 \usepackage{amsfonts, multicol, amsxtra}
 
 \title{Function Homework}
@@ -14,19 +14,90 @@
     \item domain = A, range = {2,3,4,5}, f(b) = 3, f(d) = 5
     \item  \{(a,0), (b, 0)\}, \{(a, 0), (b,1)\}, \{(a,1), (b,1)\}, \{(a,1), (b,0)\}
     \item \{(a,0), (b, 0), (c,0)\}, \{(a, 0), (b,1), (c, 0)\}, \{(a,0), (b,1), (c,1)\}, \{(a,0), (b,0), (c,0)\}, \{(a,1), (b,0), (c, 0)\}, \{(a,1), (b, 1), (c,0)\}, \{(a, 1), (b, 0), (c,1)\}, \{(a, 1), (b,1), (c,1)\} 
-    \item  {(a, d)}
+    \item  \{(a, d)\}
 \end{enumerate}
 \section*{Exercises for Section 17.2}
 \begin{enumerate}
+    \item \{(1,a), (2,b), (3,b), (4,a)\}
 	\item 
-	\item 
+	    \begin{equation*}
+	    	\begin{split}
+		    f(a) - f(b) \neq 0\\
+		    ln(a) - ln(b)\\
+		    e^{ln(a)} - e^{ln(b)}\\
+		    a -b \neq 0\\
+		    \text{Therefore, it's Injective}\\
+		    f(a) = b\\
+		    ln(a) = b\\
+		    e^b = a\\
+		    b \in \mathbb{Z}\\
+		    \text{Therefore, it's Surjective}
+	    	\end{split}
+	    \end{equation*}
 	\item [5]
+	    \begin{equation*}
+	    	\begin{split}
+		    f(a) - f(b) \ne 0\\
+		    2a+1 - (2b + 1)\\
+		    = 2a + 1 -2b -1\\
+		    = 2a-2b \ne 0\\
+		    \text{Therefore, it's Injective}\\
+		    f(a) = b,\ odd\\
+		    2a+1 = b\\
+		    2a = b-1\\
+		    a = \dfrac{b-1}{2} \notin \mathbb{Z}\\
+		    \text{Therefore, it's not Surjective}
+	    	\end{split}
+	    \end{equation*}
 	\item [6]
+	    \begin{equation*}
+	    	\begin{split}
+		    f(a1, b1) -f(a2, b2) \ne 0\\
+		    = (3n_1 - 4m_1) - (3n_2 - 4m_2)\\
+		    = 3n_1 - 4m_1 - 3n_2 + 4m_2 \ne 0\\
+		    \text{Therefore, it's Injective}\\
+		    f(a, b) = c\\
+		    3a-4b = c\\
+		    3a=c + 4b\\
+		    a = (c+4b)/3\\
+		    a = c+4b \equiv 0 (mod 3)\\
+		    a = 4b \equiv -c (mod 3)\\
+		    \text{Therefore, it's Surjective}
+	    	\end{split}
+	    \end{equation*}
 	\item [7]
+	    \begin{equation*}
+	    	\begin{split}
+		    f(0,2) = f(-1,0),\ but\ (0,2) \ne (-1, 0)\\
+		    \text{Therefore, it's not Injective}\\
+		    f(a, b) = k\\
+		    2b-4a = k\\
+		    2(b-2a) = k,\ even\\
+		    \text{Therefore, it's not Surjective, since if b is odd, the result is not longer even}\\
+	    	\end{split}
+	    \end{equation*}
 	\item [9]
-	\item [15]
+	    \begin{equation*}
+	    	\begin{split}
+		    f(a) - f(b) \ne 0\\
+		    (5a+1)/(a-2) - (5b+1)/(b-2)\\
+		    = (5a+1)(b-2) = (5b+1)(a-2)\\
+		    = 5ab - 10a + b -2 = 5ab - 10b +a-2\\
+		    = - 11a + 11b \ne 0\\
+		    \text{Therefore, it's Injective}\\
+		    f(a) = b\\
+		    (5a+1)/(a-2) = b\\
+		    5a+1 = ba - 2b\\
+		    5a -ba = -2b -1\\
+		    a(5-b) = -2b-1\\
+		    a = \dfrac{-2b-1}{5-b}, \in \mathbb{R} - \{5\}\\
+		    \text{Therefore, it's Surjective}\\
+		    \text{Therefore, it's Bijective}\\
+	    	\end{split}
+	    \end{equation*}
+	\item [15] There are $7^7$ functions. Suppose f is Injective, then there are 7! Injective and Surjective functions. Therefore, there are 7! Bijective functions.
 	\item [16]
-	\item [17]
+	\item [17] There are $2^7$ functions. $%TODO: use the notebook notes of cardinality to do these
 \end{enumerate}
 \begin{enumerate}
 	\item 
